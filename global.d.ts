@@ -1,0 +1,3 @@
+/*
+Define custom type here
+*/
