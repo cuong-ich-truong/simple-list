@@ -11,6 +11,7 @@ const getTotalPrice = (items: BaseItem[]) =>
   items.map(({ price }) => price).reduce((total, current) => total + current);
 
 export const SimpleListProvider: React.FC = ({ children }) => {
+  // TODO: replace useState with useReduce
   const [categories, setCategories] = useState<Category[]>([]);
   const [total, setTotal] = useState<number>(0);
 

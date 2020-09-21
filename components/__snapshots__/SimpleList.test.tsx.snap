@@ -12,7 +12,7 @@ exports[`Home should render without crashing 1`] = `
         <div
           class="StTitle-cua8m8-0 bhCPJC"
         >
-          F7tkS
+          7cjmqVMa
         </div>
         <div
           class="StPrice-cijbu8-0 klpCDV"
@@ -37,7 +37,7 @@ exports[`Home should render without crashing 1`] = `
         <div
           class="StTitle-cua8m8-0 bhCPJC"
         >
-          HDNMgnb1NmjVbo
+          3sBZr
         </div>
         <div
           class="StPrice-cijbu8-0 klpCDV"
@@ -62,7 +62,7 @@ exports[`Home should render without crashing 1`] = `
         <div
           class="StTitle-cua8m8-0 bhCPJC"
         >
-          IodB7fN61uLmYY&t#w
+          8RJTasUAbLQ0
         </div>
         <div
           class="StPrice-cijbu8-0 klpCDV"
@@ -183,14 +183,14 @@ exports[`Home should render without crashing 1`] = `
           role="button"
           tabindex="0"
         >
-          F7tkS
+          7cjmqVMa
         </div>
         <input
           aria-hidden="true"
           class="MuiSelect-nativeInput"
           required=""
           tabindex="-1"
-          value="59aa9abd-8825-5b65-b3ba-1adb09352678"
+          value="406e491f-74a3-5576-a253-79ab33e1e123"
         />
         <svg
           aria-hidden="true"

@@ -26,7 +26,7 @@ describe('Home', () => {
   let container: HTMLElement;
   let asFragment: () => DocumentFragment;
   let mockCategories: Category[];
-  let chance = new Chance();
+  const chance = new Chance();
 
   beforeEach(() => {
     mockCategories = [
