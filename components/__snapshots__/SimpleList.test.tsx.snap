@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render without crashing 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="StHeader-sc-9xi8n7-0 dOWrXh"
+    >
+      <div
+        class="StLine-dhselc-0 bPoNII"
+      >
+        <div
+          class="StTitle-cua8m8-0 bhCPJC"
+        >
+          F7tkS
+        </div>
+        <div
+          class="StPrice-cijbu8-0 klpCDV"
+        >
+          <div>
+            $0.00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="StItem-sc-1ncxcux-0 kWpKVU"
+    />
+  </div>
+  <div>
+    <div
+      class="StHeader-sc-9xi8n7-0 dOWrXh"
+    >
+      <div
+        class="StLine-dhselc-0 bPoNII"
+      >
+        <div
+          class="StTitle-cua8m8-0 bhCPJC"
+        >
+          HDNMgnb1NmjVbo
+        </div>
+        <div
+          class="StPrice-cijbu8-0 klpCDV"
+        >
+          <div>
+            $0.00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="StItem-sc-1ncxcux-0 kWpKVU"
+    />
+  </div>
+  <div>
+    <div
+      class="StHeader-sc-9xi8n7-0 dOWrXh"
+    >
+      <div
+        class="StLine-dhselc-0 bPoNII"
+      >
+        <div
+          class="StTitle-cua8m8-0 bhCPJC"
+        >
+          IodB7fN61uLmYY&t#w
+        </div>
+        <div
+          class="StPrice-cijbu8-0 klpCDV"
+        >
+          <div>
+            $0.00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="StItem-sc-1ncxcux-0 kWpKVU"
+    />
+  </div>
+  <div
+    class="StFooter__StHeader-sc-10ahsio-0 kIxEMy"
+  >
+    <div
+      class="StLine-dhselc-0 bPoNII"
+    >
+      <div
+        class="StTitle-cua8m8-0 bhCPJC"
+      >
+        TOTAL
+      </div>
+      <div
+        class="StPrice-cijbu8-0 klpCDV"
+      >
+        <div>
+          $0.00
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="StLine-dhselc-0 jhSrAX"
+  >
+    <div
+      class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink="false"
+        for="item-name-input"
+        id="item-name-input-label"
+      >
+        Item Name
+      </label>
+      <div
+        class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiFilledInput-input"
+          id="item-name-input"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-filled"
+        data-shrink="true"
+        for="item-price-input"
+      >
+        Price
+      </label>
+      <div
+        class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-adornedStart MuiFilledInput-adornedStart"
+      >
+        <div
+          class="MuiInputAdornment-root MuiInputAdornment-filled MuiInputAdornment-positionStart"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+          >
+            $
+          </p>
+        </div>
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedStart MuiFilledInput-inputAdornedStart"
+          id="item-price-input"
+          min="0"
+          step="1"
+          type="number"
+          value="0"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-filled Mui-required Mui-required"
+        data-shrink="true"
+        for="category-select-label"
+      >
+        Category
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+        >
+           *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="category-select-label item-category-select"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiFilledInput-input"
+          id="item-category-select"
+          role="button"
+          tabindex="0"
+        >
+          F7tkS
+        </div>
+        <input
+          aria-hidden="true"
+          class="MuiSelect-nativeInput"
+          required=""
+          tabindex="-1"
+          value="59aa9abd-8825-5b65-b3ba-1adb09352678"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconFilled"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Add
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

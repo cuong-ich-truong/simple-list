@@ -14,10 +14,10 @@ const LineItemForm: React.FC = () => {
   const { categories, addLineItem } = useContext(SimpleListContext);
   const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
-  const [categoryId, setCategoryId] = useState('-1');
+  const [categoryId, setCategoryId] = useState('');
 
   useEffect(() => {
-    if (categories[0] && categoryId === '-1') {
+    if (categories[0] && categoryId === '') {
       setCategoryId(categories[0].id);
     }
   }, [categories]);
