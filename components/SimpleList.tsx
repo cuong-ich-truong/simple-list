@@ -4,6 +4,7 @@ import LineItem from './simpleList/LineItem';
 import StHeader from './simpleList/StHeader';
 import StFooter from './simpleList/StFooter';
 import StItem from './simpleList/StItem';
+import LineItemForm from './simpleList/LineItemForm';
 
 const SimpleList: React.FC = () => {
   const { categories, total } = useContext(SimpleListContext);
@@ -25,6 +26,7 @@ const SimpleList: React.FC = () => {
       <StFooter>
         <LineItem name="TOTAL" price={total} />
       </StFooter>
+      <LineItemForm />
     </>
   );
 };

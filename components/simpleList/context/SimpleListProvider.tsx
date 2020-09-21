@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getCategories } from '../../../services/apiService';
+import { getCategories, createLineItem } from '../../../services/apiService';
 import SimpleListContext from './SimpleListContext';
-import { BaseItem, Category } from './SimpleListState';
+import { BaseItem, Category, LineItem } from './SimpleListState';
 
 const getTotalPrice = (items: BaseItem[]) =>
   items.map(({ price }) => price).reduce((total, current) => total + current);
@@ -9,7 +9,8 @@ const getTotalPrice = (items: BaseItem[]) =>
 export const SimpleListProvider: React.FC = ({ children }) => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [total, setTotal] = useState<number>(0);
-  useEffect(() => {
+
+  const fetchData = () => {
     getCategories().then((response) => {
       if (response && response.data) {
         const categories = response.data.map((category: Category) => {
@@ -19,9 +20,23 @@ export const SimpleListProvider: React.FC = ({ children }) => {
         setTotal(getTotalPrice(categories));
       }
     });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  const addLineItem = (newLineItem: LineItem) => {
+    createLineItem(newLineItem).then((response) => {
+      console.log(response);
+      if (response && response.data) {
+        fetchData();
+      }
+    });
+  };
+
   return (
-    <SimpleListContext.Provider value={{ categories, total }}>
+    <SimpleListContext.Provider value={{ categories, total, addLineItem }}>
       {children}
     </SimpleListContext.Provider>
   );

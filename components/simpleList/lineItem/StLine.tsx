@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import { SpaceProps, space } from 'styled-system';
+import { SpaceProps, space, LayoutProps, layout } from 'styled-system';
 
-const StLine = styled.div<SpaceProps>`
+interface StLineProps extends SpaceProps, LayoutProps {}
+
+const StLine = styled.div<StLineProps>`
   display: flex;
+  justify-content: space-between;
 
   ${space}
+  ${layout}
 `;
 
 export default StLine;

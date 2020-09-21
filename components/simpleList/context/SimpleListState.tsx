@@ -14,4 +14,5 @@ export interface Category extends BaseItem {
 export default interface SimpleListState {
   categories: Category[];
   total: number;
+  addLineItem: (newLineItem: LineItem) => void;
 }
