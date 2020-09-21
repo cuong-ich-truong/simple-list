@@ -12,7 +12,7 @@ exports[`Home should render without crashing 1`] = `
         <div
           class="StTitle-cua8m8-0 bhCPJC"
         >
-          7cjmqVMa
+          81df986b-a2ce-4b70-b4b2-12e3a41bf13a
         </div>
         <div
           class="StPrice-cijbu8-0 klpCDV"
@@ -37,32 +37,7 @@ exports[`Home should render without crashing 1`] = `
         <div
           class="StTitle-cua8m8-0 bhCPJC"
         >
-          3sBZr
-        </div>
-        <div
-          class="StPrice-cijbu8-0 klpCDV"
-        >
-          <div>
-            $0.00
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="StItem-sc-1ncxcux-0 kWpKVU"
-    />
-  </div>
-  <div>
-    <div
-      class="StHeader-sc-9xi8n7-0 dOWrXh"
-    >
-      <div
-        class="StLine-dhselc-0 bPoNII"
-      >
-        <div
-          class="StTitle-cua8m8-0 bhCPJC"
-        >
-          8RJTasUAbLQ0
+          1754cdd9-7a6f-4f48-9816-4ee29949caa5
         </div>
         <div
           class="StPrice-cijbu8-0 klpCDV"
@@ -183,14 +158,14 @@ exports[`Home should render without crashing 1`] = `
           role="button"
           tabindex="0"
         >
-          7cjmqVMa
+          81df986b-a2ce-4b70-b4b2-12e3a41bf13a
         </div>
         <input
           aria-hidden="true"
           class="MuiSelect-nativeInput"
           required=""
           tabindex="-1"
-          value="406e491f-74a3-5576-a253-79ab33e1e123"
+          value="6c8f51aa-9361-48b7-8600-aaa1cf60dd8e"
         />
         <svg
           aria-hidden="true"

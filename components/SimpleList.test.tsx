@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import Chance from 'chance';
 import SimpleList from './SimpleList';
 import SimpleListContext from './simpleList/context/SimpleListContext';
 import SimpleListState, {
@@ -26,13 +25,21 @@ describe('Home', () => {
   let container: HTMLElement;
   let asFragment: () => DocumentFragment;
   let mockCategories: Category[];
-  const chance = new Chance();
 
   beforeEach(() => {
     mockCategories = [
-      { id: chance.guid(), name: chance.string(), price: 0, lineItems: [] },
-      { id: chance.guid(), name: chance.string(), price: 0, lineItems: [] },
-      { id: chance.guid(), name: chance.string(), price: 0, lineItems: [] }
+      {
+        id: '6c8f51aa-9361-48b7-8600-aaa1cf60dd8e',
+        name: '81df986b-a2ce-4b70-b4b2-12e3a41bf13a',
+        price: 0,
+        lineItems: []
+      },
+      {
+        id: 'e350f15e-343c-45d6-a314-ee5984f3482b',
+        name: '1754cdd9-7a6f-4f48-9816-4ee29949caa5',
+        price: 0,
+        lineItems: []
+      }
     ];
 
     ({ container, asFragment } = render(
@@ -49,6 +56,5 @@ describe('Home', () => {
   it('should render category names', () => {
     expect(container).toHaveTextContent(mockCategories[0].name);
     expect(container).toHaveTextContent(mockCategories[1].name);
-    expect(container).toHaveTextContent(mockCategories[2].name);
   });
 });

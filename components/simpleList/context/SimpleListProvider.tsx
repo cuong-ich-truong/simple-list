@@ -10,6 +10,12 @@ import { BaseItem, Category, LineItem } from './SimpleListState';
 const getTotalPrice = (items: BaseItem[]) =>
   items.map(({ price }) => price).reduce((total, current) => total + current);
 
+const compareString = (a: string, b: string) => {
+  const text1 = a.toLocaleLowerCase();
+  const text2 = b.toLocaleLowerCase();
+  return a > b ? 1 : -1;
+};
+
 export const SimpleListProvider: React.FC = ({ children }) => {
   // TODO: replace useState with useReduce
   const [categories, setCategories] = useState<Category[]>([]);
@@ -18,9 +24,17 @@ export const SimpleListProvider: React.FC = ({ children }) => {
   const fetchData = () => {
     getCategories().then((response) => {
       if (response && response.data) {
-        const categories = response.data.map((category: Category) => {
-          return { ...category, price: getTotalPrice(category.lineItems) };
-        });
+        const categories = response.data
+          .map((category: Category) => {
+            return {
+              ...category,
+              lineItems: category.lineItems.sort((a, b) =>
+                compareString(a.name, b.name)
+              ),
+              price: getTotalPrice(category.lineItems)
+            };
+          })
+          .sort((a, b) => compareString(a.name, b.name));
         setCategories(categories);
         setTotal(getTotalPrice(categories));
       }
