@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getCategories, createLineItem } from '../../../services/apiService';
+import {
+  getCategories,
+  createLineItem,
+  deleteLineItem
+} from '../../../services/apiService';
 import SimpleListContext from './SimpleListContext';
 import { BaseItem, Category, LineItem } from './SimpleListState';
 
@@ -28,7 +32,14 @@ export const SimpleListProvider: React.FC = ({ children }) => {
 
   const addLineItem = (newLineItem: LineItem) => {
     createLineItem(newLineItem).then((response) => {
-      console.log(response);
+      if (response && response.data) {
+        fetchData();
+      }
+    });
+  };
+
+  const removeLineItem = (lineItemId: string) => {
+    deleteLineItem(lineItemId).then((response) => {
       if (response && response.data) {
         fetchData();
       }
@@ -36,7 +47,9 @@ export const SimpleListProvider: React.FC = ({ children }) => {
   };
 
   return (
-    <SimpleListContext.Provider value={{ categories, total, addLineItem }}>
+    <SimpleListContext.Provider
+      value={{ categories, total, addLineItem, removeLineItem }}
+    >
       {children}
     </SimpleListContext.Provider>
   );

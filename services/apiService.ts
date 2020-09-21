@@ -16,14 +16,11 @@ const getCategories = () => {
     method: 'GET'
   };
 
-  return (
-    fetch(`${process.env.BASE_URL}/api/categories`, options)
-      // .then(checkStatus)
-      .then((r) => r.json())
-      .catch((error) => {
-        // TODO: handle error
-      })
-  );
+  return fetch(`${process.env.BASE_URL}/api/categories`, options)
+    .then((r) => r.json())
+    .catch((error) => {
+      // TODO: handle error
+    });
 };
 
 const createLineItem = (newLineItem: LineItem) => {
@@ -35,14 +32,26 @@ const createLineItem = (newLineItem: LineItem) => {
     body: JSON.stringify(newLineItem)
   };
 
-  return (
-    fetch(`${process.env.BASE_URL}/api/lineitems`, options)
-      // .then(checkStatus)
-      .then((r) => r.json())
-      .catch((error) => {
-        // TODO: handle error
-      })
-  );
+  return fetch(`${process.env.BASE_URL}/api/lineitems`, options)
+    .then((r) => r.json())
+    .catch((error) => {
+      // TODO: handle error
+    });
 };
 
-export { getCategories, createLineItem };
+const deleteLineItem = (lineItemId: string) => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  return fetch(`${process.env.BASE_URL}/api/lineitems/${lineItemId}`, options)
+    .then((r) => r.json())
+    .catch((error) => {
+      // TODO: handle error
+    });
+};
+
+export { getCategories, createLineItem, deleteLineItem };

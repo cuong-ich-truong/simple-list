@@ -14,17 +14,23 @@ const SimpleList: React.FC = () => {
       {categories.map(({ id: categoryId, name, price, lineItems }) => (
         <div key={categoryId}>
           <StHeader>
-            <LineItem name={name} price={price} />
+            <LineItem id={categoryId} name={name} price={price} />
           </StHeader>
           <StItem>
             {lineItems.map(({ id: subItemId, name, price }) => (
-              <LineItem key={subItemId} name={name} price={price} />
+              <LineItem
+                key={subItemId}
+                id={subItemId}
+                name={name}
+                price={price}
+                canDelete
+              />
             ))}
           </StItem>
         </div>
       ))}
       <StFooter>
-        <LineItem name="TOTAL" price={total} />
+        <LineItem id={''} name="TOTAL" price={total} />
       </StFooter>
       <LineItemForm />
     </>

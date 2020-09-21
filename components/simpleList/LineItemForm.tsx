@@ -14,10 +14,10 @@ const LineItemForm: React.FC = () => {
   const { categories, addLineItem } = useContext(SimpleListContext);
   const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
-  const [categoryId, setCategoryId] = useState('');
+  const [categoryId, setCategoryId] = useState('-1');
 
   useEffect(() => {
-    if (categories[0]) {
+    if (categories[0] && categoryId === '-1') {
       setCategoryId(categories[0].id);
     }
   }, [categories]);
@@ -30,7 +30,6 @@ const LineItemForm: React.FC = () => {
     <StLine marginTop="20px">
       <TextField
         fullWidth
-        required
         id="item-name-input"
         label="Item Name"
         variant="filled"
@@ -39,7 +38,7 @@ const LineItemForm: React.FC = () => {
           setName(event.target.value);
         }}
       />
-      <FormControl fullWidth required variant="filled">
+      <FormControl fullWidth variant="filled">
         <InputLabel htmlFor="item-price-input">Price</InputLabel>
         <FilledInput
           id="item-price-input"

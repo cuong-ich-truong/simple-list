@@ -15,4 +15,5 @@ export default interface SimpleListState {
   categories: Category[];
   total: number;
   addLineItem: (newLineItem: LineItem) => void;
+  removeLineItem: (lineItemId: string) => void;
 }
