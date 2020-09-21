@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import SimpleList from '../components/SimpleList';
+import SimpleListProvider from '../components/simpleList/context/SimpleListProvider';
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Items</h2>
-        <SimpleList />
+        <SimpleListProvider>
+          <SimpleList />
+        </SimpleListProvider>
       </section>
     </Layout>
   );
