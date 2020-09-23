@@ -7,8 +7,12 @@ import {
 import SimpleListContext from './SimpleListContext';
 import { BaseItem, Category, LineItem } from './SimpleListState';
 
-const getTotalPrice = (items: BaseItem[]) =>
-  items.map(({ price }) => price).reduce((total, current) => total + current);
+const getTotalPrice = (items: BaseItem[]) => {
+  return items.length === 0
+    ? 0
+    : items.map(({ price }) => price).reduce((total, current) => total + current);
+}
+
 
 const compareString = (a: string, b: string) => {
   const text1 = a.toLocaleLowerCase();
