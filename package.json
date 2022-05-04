@@ -4,19 +4,19 @@
   "private": true,
   "author": "Cuong Truong",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev -p 3001",
+    "prod": "next start",
     "test": "jest --no-coverage"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@types/chance": "^1.1.0",
-    "isomorphic-fetch": "^2.2.1",
-    "next": "9.3.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "styled-components": "^5.2.0",
     "styled-system": "^5.1.5"
   },

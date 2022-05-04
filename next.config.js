@@ -1,5 +1,5 @@
 module.exports = {
   env: {
-    BASE_URL: 'https://localhost:5001'
+    BASE_URL: 'http://localhost:3001'
   }
 };
